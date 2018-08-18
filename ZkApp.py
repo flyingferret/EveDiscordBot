@@ -18,8 +18,8 @@ class zkApp:
     killMails = []
     lastKillMail = 0  # store the last killmail_id as to only check for newer killmails
 
-    myAllianceID: int = 99007415
-    starTime: int = 201808170000
+    myAllianceID = 99007415
+    starTime = 201808170000
 
     def __init__(self):
         self.setupESI()
