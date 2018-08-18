@@ -145,15 +145,15 @@ async def search_corporation_kb(context, *args):
                 aliases=["system_KB", "searchSystemKB", "systemKB"],
                 brief="Killboard search Corp",
                 pass_context=True)
-async def systemKills(context, systemName='J140810', *args):
+async def systemKills(context, *args):
     # consolidate arguments
     variables = consolidateArgs(args)
     systemName = variables['mainArg']
     days = variables['days']
-
+    print(systemName)
     if len(systemName) < 3:
         systemName = 'J140810'
-
+    print(systemName)
     # find the sytem ID
     systemID = killBoardApp.getID(systemName, 'solar_system')
     # search for killMails
